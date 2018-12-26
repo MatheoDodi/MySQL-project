@@ -7,8 +7,12 @@ html(lang="en")
     link(rel="stylesheet", type="text/css", href="static/style.css")
     title Email Sign Up!
   body
-    form(action="/success", method="POST")
-      input(type="text", placeholder="First Name", name="firstName")
-      input(type="text", placeholder="Last Name", name="lastName")
-      input(type="email", placeholder="email", name="email")
-      button(type="submit") Sign Up!
+    .overlay
+      .form-style-5
+        h1 Subscribe to our email!
+        form(action="/success", method="POST")
+          fieldset
+            input(type='text', name='firstName', placeholder='First Name*')
+            input(type='text', name='lastName', placeholder='Last Name*')
+            input(type='text', name='email', placeholder='Email*')
+          input(type='submit', value='Apply')

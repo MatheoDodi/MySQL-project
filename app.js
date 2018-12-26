@@ -13,4 +13,9 @@ app.get('/', (req, res) => {
   res.render('index', { test: 'Working bruh' });
 });
 
+app.post('/success', (req, res) => {
+  console.log(req.body);
+  res.send('Success!');
+});
+
 app.listen(3000, () => console.log('Server is now running on port 3000'));
